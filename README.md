@@ -4,4 +4,8 @@
 
 	pacman -S ttf-monaco 
   
-	
+
+key:
+	C-g / h 
+
+		
