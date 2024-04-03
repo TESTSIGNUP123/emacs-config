@@ -20,7 +20,8 @@ key:
 	kbd "C-x r b  [helm-filtered-bookmarks]
 	
 	kbd: "C-x C-f" [helm-find-files]
-
+	
+	kbd: <F8> [neotree] 
 
 			
 		
