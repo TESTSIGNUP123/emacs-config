@@ -7,6 +7,20 @@
 
 key:
 	
-	C-g / h 
+	centaur-tabs:	C-g / h 
+	
+	将函数 open-init-file 绑定到 <f2> 键上
 
+	projectile-mode:   (kbd "s-p")  &&   (kbd "C-c p")
+	
+	helm-mode
+	
+	kbd "M-x" [helm-M-x]
+	
+	kbd "C-x r b  [helm-filtered-bookmarks]
+	
+	kbd: "C-x C-f" [helm-find-files]
+
+
+			
 		
