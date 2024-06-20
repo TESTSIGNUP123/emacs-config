@@ -1,10 +1,10 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 
-(setq  package-archives     
-	'(("melpa-cn" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
-      	("org-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/org/")
-      	("gnu-cn"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")))
+(setq package-archives '(("gnu" . "https://mirrors.ustc.edu.cn/elpa/gnu/")
+                         ("melpa" . "https://mirrors.ustc.edu.cn/elpa/melpa/")
+                         ("nongnu" . "https://mirrors.ustc.edu.cn/elpa/nongnu/")))
+
 
 (package-initialize)
 
@@ -17,10 +17,11 @@
 
 ;(use-package  'mood-line)
 (use-package 'kaolin-themes)
-(use-package 'moody)
+;(use-package 'moody)
 (use-package 'helm)
 ;(use-package 'simple-modeline)
 (use-package 'all-the-icons)
+;(use-package 'nerd-icons)
 (use-package 'centaur-tabs)
 (use-package 'company)
 (use-package 'company-box)
@@ -41,10 +42,20 @@
 (use-package 'slime)
 ;(use-package 'smart-mode-line)
 (use-package 'zenburn-theme)
-
+(use-package 'dirvish)
+;;nano
+;(use-package 'nano-theme)
 
 ;;LSP
-(use-package 'lsp-mode)
-(use-package 'lsp-ui)
-
+;(use-package 'lsp-mode)
+;l(use-package 'lsp-ui)
+(use-package 'yasnippet)
+;(use-package 'lsp-java)
+					;(use-package 'lsp-mode :hook ((lsp-mode . lsp-enable-which-key-integration)))
+;(use-package 'hydra)
+;(use-package company)
+;(use-package lsp-ui)
+;(use-package 'which-key :config (which-key-mode))
+;(use-package 'lsp-java :config (add-hook 'java-mode-hook 'lsp))
+(use-package 'gradle-mode)
 (provide 'init-package)

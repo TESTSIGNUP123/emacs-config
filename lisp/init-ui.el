@@ -1,4 +1,4 @@
-;; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
+; 关闭工具栏，tool-bar-mode 即为一个 Minor Mode
 (tool-bar-mode -1)
 ;; 关闭文件滑动控件
 ;(scroll-bar-mode -1)
@@ -14,7 +14,13 @@
 (column-number-mode t)  
 ;; 显示行号
 (global-display-line-numbers-mode 1)
+(setq linum-format "%d> ")
 ;(global-linum-mode 1)
+;(require 'linum-relative)
+;(linum-relative-on)
+;(linum-on)
+;(linum-relative-toggle)
+;(setq linum-relative-backend 'display-line-numbers-mode)
 ;; 更改光标的样式（不能生效，解决方案见第二集）
 (setq cursor-type 'bar)
 (icomplete-mode 1)
@@ -22,8 +28,10 @@
 (setq ring-bell-function 'ignore)
 (fset 'yes-or-no-p 'y-or-n-p)
 
+
 ;;Fonts
-(set-face-attribute 'default nil :font "monaco 14") 
+(set-face-attribute 'default nil :font "monaco 16")
+
 ;; 快速打开配置文件
 (defun open-init-file()
  (interactive)
@@ -55,31 +63,35 @@
 
 ;;Mode
 
- (setq x-underline-at-descent-line t)
-  (moody-replace-mode-line-buffer-identification)
-  (moody-replace-vc-mode)
-  (moody-replace-eldoc-minibuffer-message-function
+;(setq x-underline-at-descent-line t)
+;(moody-replace-mode-line-buffer-identification)
+;(moody-replace-vc-mode)
+;  (moody-replace-eldoc-minibuffer-message-function
 
-(let ((line (face-attribute 'mode-line :underline)))
-    (set-face-attribute 'mode-line          nil :overline   line)
-    (set-face-attribute 'mode-line-inactive nil :overline   line)
-    (set-face-attribute 'mode-line-inactive nil :underline  line)
-    (set-face-attribute 'mode-line          nil :box        nil)
-    (set-face-attribute 'mode-line-inactive nil :box        nil)
-    (set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")))
+;(let ((line (face-attribute 'mode-line :underline)))
+ ;   (set-face-attribute 'mode-line          nil :overline   line)
+  ;  (set-face-attribute 'mode-line-inactive nil :overline   line)
+  ; (set-face-attribute 'mode-line-inactive nil :underline  line)
+  ; (set-face-attribute 'mode-line          nil :box        nil)
+   ; (set-face-attribute 'mode-line-inactive nil :box        nil)
+   ; (set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")))
 
+;;Doom
 
 ;;Theme
-;(load-theme 'leuven t)                 
-;(setq leuven-scale-outline-headlines nil)
-;(setq leuven-scale-org-agenda-structure nil)
-;(setq leuven-scale-volatile-highlight nil)
+(load-theme 'leuven t)                 
+(setq leuven-scale-outline-headlines nil)
+(setq leuven-scale-org-agenda-structure nil)
+(setq leuven-scale-volatile-highlight nil)
 ;(load-theme 'zenburn t)
 ;(load-theme 'srcery t)
 
-(require 'kaolin-themes)
-(load-theme 'kaolin-dark t)
-(kaolin-treemacs-theme)
+;(require 'kaolin-themes)
+;(load-theme 'kaolin-dark t)
+;(kaolin-treemacs-theme)
+
+;(load-theme 'nano t)
+;(nano-dark)
 
 ;;顶部TAB
 (require 'centaur-tabs)
@@ -101,6 +113,12 @@
 (helm-mode 1)
 ;(find-file-read-only . ido)
 
+;;透明
+(set-frame-parameter nil 'alpha '(90 . 100))
+;;icons
 
+(require 'all-the-icons)
+(display-graphic-p)
+(insert (all-the-icons-icon-for-file "foo.js"))
 
 (provide 'init-ui)
