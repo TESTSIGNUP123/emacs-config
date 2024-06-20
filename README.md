@@ -16,12 +16,16 @@ key:
 	helm-mode
 	
 	kbd "M-x" [helm-M-x]
-	
+		
 	kbd "C-x r b  [helm-filtered-bookmarks]
 	
 	kbd: "C-x C-f" [helm-find-files]
 	
 	kbd: <F8> [neotree] 
 
+## Lsp-bridge
+	支持lsp相关东西，具体看懒猫教程
+
 			
 		
+
