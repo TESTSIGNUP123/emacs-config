@@ -1,9 +1,17 @@
-#arch linux &&  emacs-config
- 	
- packages:
+# arch linux &&  emacs-config
+ 	欢迎 大家使用TuxEMacs,这是一个原汁原味的emacs mode-pkgs 55个（目前）
+
+依赖& packages:
 
 	pacman -S ttf-monaco 
-  
+ 	
+	目前支持 前端 ：  nodejs css html js
+			
+	依赖=>	npm i -g typescript-language-server; npm i -g typescript	
+		emacs 下需要： M-x lsp-install-server RET ts-ls RET	
+	后端：全部 gcc clang
+	
+			
 
 key:
 	
@@ -25,7 +33,9 @@ key:
 
 ## Lsp-bridge
 	支持lsp相关东西，具体看懒猫教程
-
-			
+ 
+ Code :
+	
+	
 		
 
