@@ -30,7 +30,7 @@
 
 
 ;;Fonts
-(set-face-attribute 'default nil :font "monaco 16")
+(set-face-attribute 'default nil :font "hack 16")
 
 ;; 快速打开配置文件
 (defun open-init-file()
@@ -62,33 +62,28 @@
 
 
 ;;Mode
-
-;(setq x-underline-at-descent-line t)
-;(moody-replace-mode-line-buffer-identification)
-;(moody-replace-vc-mode)
-;  (moody-replace-eldoc-minibuffer-message-function
-
-;(let ((line (face-attribute 'mode-line :underline)))
- ;   (set-face-attribute 'mode-line          nil :overline   line)
-  ;  (set-face-attribute 'mode-line-inactive nil :overline   line)
-  ; (set-face-attribute 'mode-line-inactive nil :underline  line)
-  ; (set-face-attribute 'mode-line          nil :box        nil)
-   ; (set-face-attribute 'mode-line-inactive nil :box        nil)
-   ; (set-face-attribute 'mode-line-inactive nil :background "#f9f2d9")))
-
-;;Doom
+;(require 'simple-modeline)
+;(simple-modeline-mode)
+;(after-init . simple-modeline-mode)
+(require 'powerline)
+(powerline-default-theme)
+(powerline-raw mode-line-mule-info nil 'l)
+(setq powerline-default-separator 'arrow)
 
 ;;Theme
-(load-theme 'leuven t)                 
-(setq leuven-scale-outline-headlines nil)
-(setq leuven-scale-org-agenda-structure nil)
-(setq leuven-scale-volatile-highlight nil)
+;(load-theme 'leuven t)                 
+;(setq leuven-scale-outline-headlines nil)
+;(setq leuven-scale-org-agenda-structure nil)
+;(setq leuven-scale-volatile-highlight nil)
 ;(load-theme 'zenburn t)
 ;(load-theme 'srcery t)
 
-;(require 'kaolin-themes)
-;(load-theme 'kaolin-dark t)
-;(kaolin-treemacs-theme)
+(require 'kaolin-themes)
+(load-theme 'kaolin-dark t)
+(kaolin-treemacs-theme)
+(setq kaolin-ocean-alt-bg t)
+(kaolin-treemacs-theme)
+
 
 ;(load-theme 'nano t)
 ;(nano-dark)
@@ -116,9 +111,15 @@
 ;;透明
 (set-frame-parameter nil 'alpha '(90 . 100))
 ;;icons
+;(require 'all-the-icons)
+;(display-graphic-p)
+;(insert (all-the-icons-icon-for-file "foo.js"))
 
-(require 'all-the-icons)
-(display-graphic-p)
-(insert (all-the-icons-icon-for-file "foo.js"))
+(require 'spaceline-all-the-icons)
+(spaceline-all-the-icons--setup-anzu)            ;; Enable anzu searching
+(spaceline-all-the-icons--setup-package-updates) ;; Enable package update indicator
+(spaceline-all-the-icons--setup-git-ahead)       ;; Enable # of commits ahead of upstream in git
+(spaceline-all-the-icons--setup-paradox)         ;; Enable Paradox mode line
+(spaceline-all-the-icons--setup-neotree)         ;; Enable Neotree mode line
 
 (provide 'init-ui)

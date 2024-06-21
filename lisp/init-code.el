@@ -31,14 +31,10 @@
 (add-hook 'elisp-byte-code-mode-hook 'lsp)
 (add-hook 'css-mode-hook 'lsp)
 (add-hook 'go-mode-hook 'lsp)
-(add-hook java-mode-hook 'lsp)
+(add-hook 'java-mode-hook 'lsp)
 
 					;lsp-bridge
-(require 'yasnippet)
-(yas-global-mode 1)
 
-;(require 'lsp-bridge)
-;(global-lsp-bridge-mode)
 
 ;;LSP-bridge
 (add-to-list 'load-path "~/.emacs.d/elpa/lsp-bridge")
