@@ -43,6 +43,7 @@
 ;(use-package 'smart-mode-line)
 (use-package 'zenburn-theme)
 (use-package 'dirvish)
+(use-package 'kaolin-themes)
 ;;nano
 ;(use-package 'nano-theme)
 
