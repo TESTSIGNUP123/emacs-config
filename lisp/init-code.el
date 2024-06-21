@@ -24,16 +24,16 @@
  ;    (message "NodeJS debugger successfully installed")
   ;(message "NodeJS debugger install failed. Please download it manually"))
 
-(add-hook 'typescript-mode-hook 'lsp)
-(add-hook 'javascript-mode-hook 'lsp)
-(add-hook 'c-mode-hook 'lsp)
-(add-hook 'c++-mode-hook 'lsp)
-(add-hook 'elisp-byte-code-mode-hook 'lsp)
-(add-hook 'css-mode-hook 'lsp)
-(add-hook 'go-mode-hook 'lsp)
-(add-hook 'java-mode-hook 'lsp)
+;(add-hook 'typescript-mode-hook 'lsp)
+;(add-hook 'javascript-mode-hook 'lsp)
+;(add-hook 'c-mode-hook 'lsp)
+;(add-hook 'c++-mode-hook 'lsp)
+;(add-hook 'elisp-byte-code-mode-hook 'lsp)
+;(add-hook 'css-mode-hook 'lsp)
+;(add-hook 'go-mode-hook 'lsp)
+;(add-hook 'java-mode-hook 'lsp)
 
-					;lsp-bridge
+			
 
 
 ;;LSP-bridge
@@ -42,7 +42,15 @@
 (yas-global-mode 1)
 (require 'lsp-bridge)
 (global-lsp-bridge-mode)
-
+ (setq lsp-bridge-enable-signature-help t)
+ (setq lsp-bridge-signature-help-fetch-idle 0.3)
+ (setq lsp-bridge-signature-show-function 'lsp-bridge-signature-show-with-frame)
+ (setq lsp-bridge-signature-show-with-frame-position 'point)
+;lsp-bridge-add-hooks
+(setq lsp-bridge-c-lsp-server "clangd")
+(setq lsp-bridge-python-lsp-server "pyright")
+(setq lsp-bridge-javascript-mode-hook "vscode-langservers-extracted")
+(setq lsp-bridge-html-lsp-server "vscode-langservers-extrarted")
 (defun enable-lsp-bridge()
   (when-let* ((project (project-current))
               (project-root (nth 2 project)))
