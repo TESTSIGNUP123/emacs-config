@@ -17,9 +17,7 @@
 
 ;(use-package  'mood-line)
 (use-package 'kaolin-themes)
-
 (use-package 'helm)
-
 (use-package 'all-the-icons)
 ;(use-package 'nerd-icons)
 (use-package 'centaur-tabs)
@@ -50,8 +48,10 @@
 (use-package 'yasnippet)
 (use-package 'gradle-mode)
 ;(use-package 'lsp-mode)
-;(use-package 'lsp-ui)
+(use-package 'lsp-java)
 ;(use-package 'simple-modeline)
 (use-package 'spaceline-all-the-icons)
+(use-package 'web-mode)
+
 
 (provide 'init-package)
