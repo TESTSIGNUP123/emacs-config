@@ -35,7 +35,7 @@ key:
 	支持lsp相关东西，具体看懒猫教程
  
  Code :
-	
-	
-		
+	 git clone --depth=1 https://github.com/manateelazycat/lsp-bridge.git
+	建议 lsp-bridge 自己clone 到 ~/.emacs.d/elpa/ 文件夹里 这是一个单独的文件夹
+			
 
