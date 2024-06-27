@@ -39,5 +39,13 @@ key:
 	 git clone --depth=1 https://github.com/manateelazycat/lsp-bridge.git
 	 
 	 建议 lsp-bridge 自己clone 到 ~/.emacs.d/elpa/ 文件夹里 这是一个单独的文件夹
-			
+
+
+### 每次更新 报表
+	
+		V0.0.3 lisp/init-ui.el 更新相对行号
+		
+		V0.0.2 支持前端及后端配置完毕
+
+
 
